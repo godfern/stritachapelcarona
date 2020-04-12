@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Wire One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Wire One'), local('WireOne'), url(http://themes.googleusercontent.com/static/fonts/wireone/v4/fas9dl2wmMkt5rCu-aBez_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
