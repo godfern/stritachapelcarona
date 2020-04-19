@@ -1,0 +1,49 @@
+{
+  "name": "stritachapelcarona-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.9.1",
+    "moment": "^2.24.0",
+    "nouislider": "^14.0.2",
+    "react": "^16.13.1",
+    "react-datetime": "^2.16.3",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "react-slick": "^0.25.2",
+    "react-swipeable-views": "^0.13.3"
+  },
+  "description": "St Rita's Chapel Website \r =============",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^6.0.0",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godfern/stritachapelcarona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godfern/stritachapelcarona/issues"
+  },
+  "homepage": "https://github.com/godfern/stritachapelcarona#readme"
+}
