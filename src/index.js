@@ -11,6 +11,11 @@ import LandingPage from "./views/LandingPage/LandingPage.js";
 import ProfilePage from "./views/ProfilePage/ProfilePage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
 
+import { configure } from "./helpers/mock-api";
+
+// Mocking all the APIs over here
+configure();
+
 var hist = createBrowserHistory();
 
 ReactDOM.render(
