@@ -57,7 +57,7 @@ export default function Components(props) {
       />
       <BannerMainContent backgroundColor={"#007fd5"}>
         <div className={classes.container}>
-          <div class="sky">
+          <div className="sky">
             <div className={classes.cloudsOne}></div>
             <div className={classes.cloudsTwo}></div>
             <div className={classes.cloudsThree}></div>
