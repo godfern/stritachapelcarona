@@ -29,7 +29,7 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function NovenaListSection() {
+export default function NovenaPage() {
   const classes = useStyles();
 
   React.useEffect(() => {

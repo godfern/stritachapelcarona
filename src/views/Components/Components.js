@@ -46,6 +46,8 @@ const useStyles = makeStyles(allStyles);
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
+    console.log('some 2', classes)
+
   return (
     <div>
       <Header
@@ -57,7 +59,6 @@ export default function Components(props) {
           height: 400,
           color: "white"
         }}
-        {...rest}
       />
       <BannerMainContent backgroundColor={"#007fd5"}>
         <div className={classes.container}>

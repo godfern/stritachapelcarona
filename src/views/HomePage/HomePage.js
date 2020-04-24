@@ -36,7 +36,7 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
-export default function HomeSection() {
+export default function HomePage() {
   const classes = useStyles();
 
   React.useEffect(() => {
