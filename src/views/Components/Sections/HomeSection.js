@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "nouislider";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 // @material-ui/icons
 
@@ -45,12 +46,7 @@ export default function HomeSection() {
             <p>
               Find the latest of the Novenas & Feast details here
             </p>
-            <a
-              href="#pablo"
-              className={classes.cardLink}
-              onClick={(e) => e.preventDefault()}>
-              View
-            </a>
+            <Link to="/novenas" className={classes.cardLink}>View</Link>
           </CardBody>
         </Card>
         <Card className={`${classes.card} card-wrapper`}>
