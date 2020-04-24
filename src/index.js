@@ -6,10 +6,11 @@ import { Router, Route, Switch } from "react-router-dom";
 import "assets/scss/material-kit-react.scss?v=1.8.0";
 
 // pages for this product
-import Components from "./views/Components/Components";
-import LandingPage from "./views/LandingPage/LandingPage";
-import ProfilePage from "./views/ProfilePage/ProfilePage";
-import LoginPage from "./views/LoginPage/LoginPage";
+import Components from "./views/Components/Components.js";
+import LandingPage from "./views/LandingPage/LandingPage.js";
+import ProfilePage from "./views/ProfilePage/ProfilePage.js";
+import LoginPage from "./views/LoginPage/LoginPage.js";
+import ComingSoonPage from "./views/ComingSoonPage/ComingSoonPage.js";
 import NovenaListSection from "./views/Components/Sections/NovenaListSection";
 
 import { configure } from "./helpers/mock-api";
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/novenas" component={NovenaListSection} />
+      <Route path="/coming-soon-page" component={ComingSoonPage} />
       <Route path="/" component={Components} />
     </Switch>
   </Router>,
