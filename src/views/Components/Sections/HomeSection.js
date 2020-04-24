@@ -45,54 +45,35 @@ export default function HomeSection() {
 
   return (
     <div className={classes.sections}>
-      <div className={classes.container}>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-          <Card style={{width: "20rem"}}>
-            <CardBody>
-              <h4 className={classes.cardTitle}>Novenas & Feast</h4>
-              <p>
-                Find the latest of the Novenas & Feast details here
-              </p>
-              <Link to={"/coming-soon-page"} className={classes.link}>
-                  <Button color="primary" size="lg" simple>
-                    View
-                  </Button>
-                </Link>
-            </CardBody>
-          </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card style={{width: "20rem"}}>
-              <CardBody>
-                <h4 className={classes.cardTitle}>Chapel Announcement</h4>
-                <p>
-                  Find the latest from the Chapel and its future program
-                </p>
-                <Link to={"/coming-soon-page"} className={classes.link}>
-                  <Button color="primary" size="lg" simple>
-                    View
-                  </Button>
-                </Link>
-              </CardBody>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card style={{width: "20rem"}}>
-              <CardBody>
-                <h4 className={classes.cardTitle}>Chaplain  Message</h4>
-                <p>
-                  Chaplain message to the people of carona
-                </p>
-                <Link to={"/coming-soon-page"} className={classes.link}>
-                  <Button color="primary" size="lg" simple>
-                    View
-                  </Button>
-                </Link>
-              </CardBody>
-            </Card>
-          </GridItem>
-        </GridContainer>
+      <div className={`${classes.container} tile-cards-container`}>
+        <Card className={`${classes.card} card-wrapper`}>
+          <CardBody>
+            <h4 className={classes.cardTitle}>Novenas & Feast</h4>
+            <p>
+              Find the latest of the Novenas & Feast details here
+            </p>
+            <Link to="/novenas" className={classes.cardLink}>View</Link>
+          </CardBody>
+        </Card>
+        <Card className={`${classes.card} card-wrapper`}>
+          <CardBody>
+            <h4 className={classes.cardTitle}>Chapel Announcement</h4>
+            <p>
+              Find the latest from the chapel
+            </p>
+            <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
+          </CardBody>
+        </Card>
+
+        <Card className={`${classes.card} card-wrapper`}>
+          <CardBody>
+            <h4 className={classes.cardTitle}>Chaplain  Message</h4>
+            <p>
+              Chaplain message to the people of carona
+            </p>
+            <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
+          </CardBody>
+        </Card>
       </div>
     </div>
   );
