@@ -1,0 +1,19 @@
+.novena-listing-page-container {
+  .novenas-list,
+  .feasts-list {
+    display: flex;
+    justify-content: center;
+    .day-date-wrapper {
+      display: flex;
+      justify-content: space-between;
+      color: grey;
+    }
+    .image {
+      height: 180px;
+    }
+    .card-actions {
+      padding: 0px 16px 16px 16px;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { fetchJSON } from "helpers/api";
+import { fetchJSON } from "../helpers/api";
 
 const NOVENA_API_PATH = "/api/novenas";
 

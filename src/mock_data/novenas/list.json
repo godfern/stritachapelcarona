@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image_url": "",
+    "image_url": "https://material-ui.com/static/images/cards/paella.jpg",
     "day_no": 1,
     "date": "2020-03-12T20:14:20.258Z",
     "title": "Novena 1",
@@ -11,8 +11,8 @@
   },
   {
     "id": 2,
-    "image_url": "",
-    "day_no": 1,
+    "image_url": "https://material-ui.com/static/images/cards/paella.jpg",
+    "day_no": 2,
     "date": "2020-03-12T20:14:20.258Z",
     "title": "Novena 2",
     "description": "some description some description some description some description some description some description some description some description some description ",
@@ -21,8 +21,8 @@
   },
    {
     "id": 3,
-    "image_url": "",
-    "day_no": 1,
+    "image_url": "https://material-ui.com/static/images/cards/paella.jpg",
+    "day_no": 3,
     "date": "2020-03-12T20:14:20.258Z",
     "title": "Novena 3",
     "description": "some description some description some description some description some description some description some description some description some description ",
@@ -31,8 +31,8 @@
   },
   {
     "id": 4,
-    "image_url": "",
-    "day_no": 1,
+    "image_url": "https://material-ui.com/static/images/cards/paella.jpg",
+    "day_no": 4,
     "date": "2020-03-12T20:14:20.258Z",
     "title": "Novena 4",
     "description": "some description some description some description some description some description some description some description some description some description ",
@@ -41,8 +41,8 @@
   },
   {
     "id": 5,
-    "image_url": "",
-    "day_no": 1,
+    "image_url": "https://material-ui.com/static/images/cards/paella.jpg",
+    "day_no": 5,
     "date": "2020-03-12T20:14:20.258Z",
     "title": "Novena 5",
     "description": "some description some description some description some description some description some description some description some description some description ",
@@ -51,8 +51,8 @@
   },
   {
     "id": 6,
-    "image_url": "",
-    "day_no": 1,
+    "image_url": "https://material-ui.com/static/images/cards/paella.jpg",
+    "day_no": 6,
     "date": "2020-03-12T20:14:20.258Z",
     "title": "Novena 6",
     "description": "some description some description some description some description some description some description some description some description some description ",
