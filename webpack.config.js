@@ -39,9 +39,10 @@ module.exports = {
   resolve: {
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
-      assets: path.resolve(__dirname, 'src/assets/')
+      assets: path.resolve(__dirname, 'src/assets/'),
+      images: path.resolve("src/assets/img/")
     },
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ["*", ".js", ".jsx", ".png"]
   },
   output: {
     path: path.resolve(__dirname, "dist/"),
@@ -52,7 +53,8 @@ module.exports = {
     contentBase: path.join(__dirname, "public/"),
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
+    hotOnly: true,
+    historyApiFallback: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 };
