@@ -3,17 +3,39 @@
   .feasts-list {
     display: flex;
     justify-content: center;
-    .day-date-wrapper {
+    .card-container {
       display: flex;
-      justify-content: space-between;
-      color: grey;
-    }
-    .image {
-      height: 180px;
-    }
-    .card-actions {
-      padding: 0px 16px 16px 16px;
-      justify-content: flex-end;
-    }
+      flex-direction: column;
+      @media (min-width: 576px) {
+        flex-direction: row;
+      }
+      .card-details {
+        flex: 1;
+        .message {
+          font-style: italic;
+        }
+        .day-date-wrapper {
+          display: flex;
+          justify-content: space-between;
+          color: grey;
+        }
+      }
+      .image {
+        width: 8rem;
+        height: 8rem;
+        align-self: center;
+        // @media (min-width: 576px) {
+        // }
+        // @media (min-width: 768px) {
+        // }
+        // @media (min-width: 992px) {
+        // }
+        @media (min-width: 1200px) {
+          align-self: baseline;
+          width: 14rem;
+          height: 14rem;
+        }
+      }
+    } 
   }
 }

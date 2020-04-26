@@ -58,32 +58,31 @@ export default function NovenaPage() {
     <div className={`${classes.sections} novena-listing-page-container`}>
       <div className={`${classes.container}`}>
         <Grid container spacing={2} className="novenas-list">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={8}>
             <Typography variant="h6" className={classes.title}>
               Novenas
             </Typography>
             {novenas.map(novena => {
               return (
-                <Card key={novena.id} className={`${classes.card}`}>
-                  <CardMedia
-                    className="image"
-                    image={novena.image_url}
-                    title="Paella dish"
-                  />
-                  <CardContent>
-                    <div className="day-date-wrapper">
-                      <span>Day {novena.day_no}</span>
-                      <span>{Moment(novena.date).format('LL')}</span>
-                    </div>
-                    <h4 className={classes.cardTitle}>{novena.title}</h4>
-                    <p>{novena.description}</p>
-                  </CardContent>
-                  <CardActions className="card-actions">
-                    <Button to={"/coming-soon-page"} variant="outlined" color="primary"
-                      component={RouterLink}>
-                      View
-                    </Button>
-                  </CardActions>
+                <Card key={novena.id} className={`${classes.card} card-container`}>
+                  {novena.image_url &&
+                    <CardMedia
+                      className="image"
+                      image={novena.image_url}
+                      title="Paella dish"
+                    />
+                  }
+                  <div className="card-details">
+                    <CardContent>
+                      <div className="day-date-wrapper">
+                        <span>Day {novena.day_no}</span>
+                        <span>{Moment(novena.date).format('LL')}</span>
+                      </div>
+                      <h4 className={classes.cardTitle}>{novena.title}</h4>
+                      <p className="message">“{novena.message}”</p>
+                      <p>{novena.description}</p>
+                    </CardContent>
+                  </div>
                 </Card>
               );
             })}

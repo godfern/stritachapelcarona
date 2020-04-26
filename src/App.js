@@ -12,10 +12,9 @@ import LoginPage from "./views/LoginPage/LoginPage";
 import ComingSoonPage from "./views/ComingSoonPage/ComingSoonPage";
 import NovenaPage from "./views/NovenaPage/NovenaPage";
 
-import { configure } from "./helpers/mock-api";
-
+// import { configure } from "./helpers/mock-api";
 // Mocking all the APIs over here
-configure();
+// configure();
 
 var hist = createBrowserHistory();
 

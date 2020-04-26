@@ -1,16 +1,10 @@
 import { fetchJSON } from "../helpers/api";
 
-const NOVENA_API_PATH = "/api/novenas";
+const NOVENA_API_URL = "http://demo7623541.mockable.io/novenas";
 
 class Novena {
   async list() {
-    return fetchJSON(NOVENA_API_PATH, {
-      method: 'get'
-    });
-  }
-
-  async get(novena_id) {
-    return fetchJSON([NOVENA_API_PATH, novena_id].join('/'), {
+    return fetchJSON(NOVENA_API_URL, {
       method: 'get'
     });
   }
