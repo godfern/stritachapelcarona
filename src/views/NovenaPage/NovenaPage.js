@@ -20,6 +20,7 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 
 import novena from "../../services/Novena";
+import feast from "../../services/Feast";
 
 import {
   cardTitle,
@@ -50,8 +51,14 @@ export default function NovenaPage() {
     setNovenas(data);
   }
 
+  const fetchFeasts = async () => {
+    let data = await feast.list();
+    setFeasts(data);
+  }
+
   useEffect(() => {
     fetchNovenas();
+    fetchFeasts();
   }, []);
 
   return (
@@ -92,10 +99,34 @@ export default function NovenaPage() {
 
       <div className={`${classes.container}`}>
         <Grid container spacing={2} className="feasts-list">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={8}>
             <Typography variant="h6" className={classes.title}>
               Feasts
             </Typography>
+            {feasts.map(novena => {
+              return (
+                <Card key={novena.id} className={`${classes.card} card-container`}>
+                  {novena.image_url &&
+                    <CardMedia
+                      className="image"
+                      image={novena.image_url}
+                      title="Paella dish"
+                    />
+                  }
+                  <div className="card-details">
+                    <CardContent>
+                      <div className="day-date-wrapper">
+                        <span>Day {novena.day_no}</span>
+                        <span>{Moment(novena.date).format('LL')}</span>
+                      </div>
+                      <h4 className={classes.cardTitle}>{novena.title}</h4>
+                      <p className="message">“{novena.message}”</p>
+                      <p>{novena.description}</p>
+                    </CardContent>
+                  </div>
+                </Card>
+              );
+            })}
           </Grid>
         </Grid>
       </div>
