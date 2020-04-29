@@ -81,13 +81,10 @@ class Layout extends Component {
                   <img
                     src={image}
                     alt="..."
-                    className={
-                      classes.imgRaised +
-                      " " +
-                      classes.imgRoundedCircle +
-                      " " +
-                      classes.imgFluid
-                    }
+                    className={`${classes.imgRaised}
+                      ${classes.imgRoundedCircle}
+                      ${classes.imgFluid}
+                      st-ritas-img`}
                   />
                 </div>
               </GridItem>

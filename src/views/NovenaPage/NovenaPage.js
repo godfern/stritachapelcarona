@@ -109,9 +109,7 @@ export default function NovenaPage() {
                   {novena.image_url &&
                     <CardMedia
                       className="image"
-                      image={novena.image_url}
-                      title="Paella dish"
-                    />
+                      image={novena.image_url} />
                   }
                   <div className="card-details">
                     <CardContent>

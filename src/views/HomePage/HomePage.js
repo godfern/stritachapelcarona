@@ -61,15 +61,15 @@ export default function HomePage() {
             <p>
               Find the latest from the chapel
             </p>
-            <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
+            <Link to={"/announcements"} className={classes.cardLink}>View</Link>
           </CardBody>
         </Card>
 
         <Card className={`${classes.card} card-wrapper`}>
           <CardBody>
-            <h4 className={classes.cardTitle}>Chaplain  Message</h4>
+            <h4 className={classes.cardTitle}>COVID-19 Updates</h4>
             <p>
-              Chaplain message to the people of carona
+              Find the latest news and updates from Vatican and Archdiocesan
             </p>
             <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
           </CardBody>
