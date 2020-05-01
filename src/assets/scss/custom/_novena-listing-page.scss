@@ -1,0 +1,35 @@
+.novena-listing-page-container {
+  .novenas-list,
+  .feasts-list {
+    display: flex;
+    justify-content: center;
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 576px) {
+        flex-direction: row;
+      }
+      .card-details {
+        flex: 1;
+        .message {
+          font-style: italic;
+        }
+        .day-date-wrapper {
+          display: flex;
+          justify-content: space-between;
+          color: grey;
+        }
+      }
+      .image {
+        width: 8rem;
+        height: 8rem;
+        align-self: center;
+        @media (min-width: 1200px) {
+          align-self: baseline;
+          width: 14rem;
+          height: 14rem;
+        }
+      }
+    } 
+  }
+}

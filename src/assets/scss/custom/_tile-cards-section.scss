@@ -1,0 +1,17 @@
+.tile-cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  .card-wrapper {
+    width: 18rem;
+    // @media (min-width: 576px) {
+    // }
+    // @media (min-width: 768px) {
+    // }
+    // @media (min-width: 992px) {
+    // }
+    @media (min-width: 1200px) {
+      width: 20rem;
+    }
+  }
+}
