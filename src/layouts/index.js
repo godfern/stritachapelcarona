@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
 import Header from "components/MainHeader/MainHeader.js";
-import Footer from "components/Footer/Footer.js";
+import Footer from "components/MainFooter/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import BannerMainContent from "components/BannerMainContent/BannerMainContent.js";
