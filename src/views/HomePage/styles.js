@@ -49,8 +49,28 @@ const basicsStyle = {
         display: "flex",
         width: "30%",
         justifyContent: "flex-end"
+    },
+    serviceSection: {
+        marginTop: "30px"
     }
 };
+
+const imageStyles = {
+    imgCard: {
+        width: "100%",
+        height: "100%",
+        borderRadius: "calc(.25rem - 1px)",
+    },
+    imgCardOverlay: {
+        position: "absolute",
+        top: "0",
+        right: "0",
+        bottom: "0",
+        left: "0",
+        padding: "1.25rem",
+        color: "floralwhite"
+    }
+}
 
 const playerStyles = {
     root: {
@@ -89,4 +109,4 @@ const playerStyles = {
     }
 };
 
-export { basicsStyle as default  , playerStyles};
+export { basicsStyle as default, playerStyles, imageStyles };

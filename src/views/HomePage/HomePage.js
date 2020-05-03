@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+
 // @material-ui/core components
+import Chip from '@material-ui/core/Chip';
 import { makeStyles } from "@material-ui/core/styles";
+
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 import AudioPlayer from 'material-ui-audio-player';
 
+// @material-ui/icons
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+
 // core components
 import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+
+import stRitaCardImage from "assets/img/st-rita-card.jpg";
+import chapelCardImage from "assets/img/chapel.jpg";
+import covidCardImage from "assets/img/covid-19.png";
+
 
 import {
   cardTitle,
@@ -18,14 +28,20 @@ import {
   card
 } from "assets/jss/material-kit-react.js";
 
-import basicsStyle, { playerStyles } from './styles';
+import ChapelServicesGrid from "./ChapelServiceGrid";
+
+import ChapelServices from "../../services/ChapelServices";
+import { dailyServiceList } from "./utils";
+
+import basicsStyle, { playerStyles, imageStyles } from './styles';
 
 const styles = {
   ...basicsStyle,
   cardTitle,
   cardLink,
   cardSubtitle,
-  card
+  card,
+  ...imageStyles
 };
 
 const useStyles = makeStyles(styles);
@@ -33,41 +49,45 @@ const playerUseStyles = makeStyles(playerStyles);
 
 export default function HomePage() {
   const classes = useStyles();
+  const [chapelServices, setChapelServices] = useState({});
+
+  const fetchChapelServices = async () => {
+    let data = await ChapelServices.list();
+    let list = dailyServiceList(data);
+    setChapelServices(list);
+  }
 
   React.useEffect(() => {
-
-  });
+    fetchChapelServices();
+  }, []);
 
   return (
     <div className={classes.sections}>
       <div className={`${classes.container} tile-cards-container`}>
         <Card className={`${classes.card} card-wrapper`}>
-          <CardBody>
-            <h3>Novenas & Feast</h3>
-            <p>
-              Find the latest of the Novenas & Feast details here
-            </p>
+          <img className={classes.imgCard} src={stRitaCardImage} alt="Card-img" />
+          <div className={classes.imgCardOverlay}>
+            <h2>Novenas & Feast</h2>
+            <p>Find the latest of the Novenas & Feast details here</p>
             <Link to="/novenas" className={classes.cardLink}>View</Link>
-          </CardBody>
+          </div>
         </Card>
         <Card className={`${classes.card} card-wrapper`}>
-          <CardBody>
-            <h3>Chapel Announcement</h3>
-            <p>
-              Find the latest from the chapel
-            </p>
+          <img className={classes.imgCard} src={chapelCardImage} alt="Card-img" />
+          <div className={classes.imgCardOverlay}>
+            <h2>Chapel Announcement</h2>
+            <p>Find the latest from the chapel</p>
             <Link to={"/announcements"} className={classes.cardLink}>View</Link>
-          </CardBody>
+          </div>
         </Card>
 
         <Card className={`${classes.card} card-wrapper`}>
-          <CardBody>
-            <h4 className={classes.cardTitle}>COVID-19 Updates</h4>
-            <p>
-              Find the latest news and updates from Vatican and Archdiocesan
-            </p>
+          <img className={classes.imgCard} src={covidCardImage} alt="Card-img" />
+          <div className={classes.imgCardOverlay}>
+            <h2>COVID-19 Updates</h2>
+            <p>Find the latest news and updates from Vatican and Archdiocesan</p>
             <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
-          </CardBody>
+          </div>
         </Card>
       </div>
       <div className={`${classes.container} ${classes.prayerSection}`}>
@@ -81,6 +101,11 @@ export default function HomePage() {
               useStyles={playerUseStyles} />
           </GridItem>
         </GridContainer>
+      </div>
+      <div className={`${classes.container} ${classes.serviceSection}`}>
+        <h3 className={classes.prayerTitle}>Our Chapel Services <Chip color="secondary" label="No services are held due to COVID-19" icon={<SentimentVeryDissatisfiedIcon />}/></h3>
+        <h4 className={classes.prayerTitle}>Daily Masses</h4>
+        <ChapelServicesGrid services={chapelServices} />
       </div>
     </div>
   );
