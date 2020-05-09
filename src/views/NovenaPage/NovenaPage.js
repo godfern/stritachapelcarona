@@ -8,10 +8,8 @@ import Slider from "nouislider";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 
 // @material-ui/icons
 
@@ -75,9 +73,7 @@ export default function NovenaPage() {
                   {novena.image_url &&
                     <CardMedia
                       className="image"
-                      image={novena.image_url}
-                      title="Paella dish"
-                    />
+                      image={novena.image_url} />
                   }
                   <div className="card-details">
                     <CardContent>

@@ -71,7 +71,7 @@ export default function HomePage() {
             <p>
               Find the latest news and updates from Vatican and Archdiocesan
             </p>
-            <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
+            <Link to={"/updates"} className={classes.cardLink}>View</Link>
           </CardBody>
         </Card>
       </div>
