@@ -13,7 +13,7 @@ import BannerMainContent from "components/BannerMainContent/BannerMainContent.js
 // sections for this page
 import HeaderLinks from "components/MainHeader/MainHeaderLinks.js";
 
-import image from "assets/img/st-rita.gif";
+import image from "assets/img/st-rita.jpeg";
 
 import basicsStyle, { imageStyles } from './styles';
 

@@ -68,16 +68,16 @@ export default function HomePage() {
           <img className={classes.imgCard} src={stRitaCardImage} alt="Card-img" />
           <div className={classes.imgCardOverlay}>
             <h2>Novenas & Feast</h2>
-            <p>Find the latest of the Novenas & Feast details here</p>
-            <Link to="/novenas" className={classes.cardLink}>View</Link>
+            {/* <p>Find the latest of the Novenas & Feast details here</p> */}
+            <Link to="/novenas" className={classes.cardLink+' '+classes.viewLink}>View</Link>
           </div>
         </Card>
         <Card className={`${classes.card} card-wrapper`}>
           <img className={classes.imgCard} src={chapelCardImage} alt="Card-img" />
           <div className={classes.imgCardOverlay}>
             <h2>Chapel Announcement</h2>
-            <p>Find the latest from the chapel</p>
-            <Link to={"/announcements"} className={classes.cardLink}>View</Link>
+            {/* <p>Find the latest from the chapel</p> */}
+            <Link to={"/announcements"} className={classes.cardLink+' '+classes.viewLink}>View</Link>
           </div>
         </Card>
 
@@ -85,8 +85,8 @@ export default function HomePage() {
           <img className={classes.imgCard} src={covidCardImage} alt="Card-img" />
           <div className={classes.imgCardOverlay}>
             <h2>COVID-19 Updates</h2>
-            <p>Find the latest news and updates from Vatican and Archdiocesan</p>
-            <Link to={"/coming-soon-page"} className={classes.cardLink}>View</Link>
+            {/* <p>Find the latest news and updates from Vatican and Archdiocesan</p> */}
+            <Link to={"/updates"} className={classes.cardLink+' '+classes.viewLink}>View</Link>
           </div>
         </Card>
       </div>

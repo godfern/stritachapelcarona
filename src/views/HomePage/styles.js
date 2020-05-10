@@ -52,6 +52,14 @@ const basicsStyle = {
     },
     serviceSection: {
         marginTop: "30px"
+    },
+    viewLink: {
+        position: "absolute",
+        bottom: "5px",     
+        left:"10px",
+        fontWeight: "500",
+        fontSize: "18px",
+        color: "##228ae6"
     }
 };
 

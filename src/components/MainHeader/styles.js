@@ -13,7 +13,7 @@ import {
     drawerWidth
   } from "assets/jss/material-kit-react.js";
   
-  const headerStyle = {
+  const basicsStyle = {
     appBar: {
       display: "flex",
       border: "0",
@@ -149,6 +149,21 @@ import {
       ...transition
     }
   };
-  
-  export default headerStyle;
+
+  const imageStyles = {
+    imgCard: {
+        width: "100%",
+        borderRadius: "calc(.25rem - 1px)"
+    },
+    img: {
+      width: "40px",
+      height: "55px",
+      borderRadius: "50%"
+    }
+}
+
+export {
+  basicsStyle as
+  default, imageStyles
+};
   
