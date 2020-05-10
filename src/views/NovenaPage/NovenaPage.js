@@ -10,6 +10,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
 
 // @material-ui/icons
 
@@ -27,7 +29,7 @@ import {
   card
 } from "assets/jss/material-kit-react.js";
 
-import basicsStyle from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+import basicsStyle from "./styles";
 
 const styles = {
   ...basicsStyle,
@@ -62,11 +64,19 @@ export default function NovenaPage() {
   return (
     <div className={`${classes.sections} novena-listing-page-container`}>
       <div className={`${classes.container}`}>
+      <GridContainer className={classes.sectionHeader}
+          direction="column"
+          justify="center"
+          alignItems="center">
+          <GridItem xs={12} sm={12} md={8}>
+            <h2>St. Rita de Cascia Novena and Feast</h2>
+            <h4>Prayers during the Novenas starting from 12th May to 22nd May</h4>
+            <h5>You can pray the full St Rita of Cascia Novena below</h5>
+          </GridItem>
+      </GridContainer>
+
         <Grid container spacing={2} className="novenas-list">
           <Grid item xs={12} md={8}>
-            <Typography variant="h6" className={classes.title}>
-              Novenas
-            </Typography>
             {novenas.map(novena => {
               return (
                 <Card key={novena.id} className={`${classes.card} card-container`}>
@@ -82,8 +92,8 @@ export default function NovenaPage() {
                         <span>{Moment(novena.date).format('LL')}</span>
                       </div>
                       <h4 className={classes.cardTitle}>{novena.title}</h4>
-                      <p className="message">“{novena.message}”</p>
-                      <p>{novena.description}</p>
+                      <p className="message">{novena.message}</p>
+                      <div dangerouslySetInnerHTML={{ __html: novena.description }} />
                     </CardContent>
                   </div>
                 </Card>

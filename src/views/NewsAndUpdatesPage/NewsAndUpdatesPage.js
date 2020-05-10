@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Moment from 'moment';
-import { Link as RouterLink } from 'react-router-dom';
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
 import Typography from "@material-ui/core/Typography";
+import { List, ListItem } from "@material-ui/core";
 
 import "assets/js/libs/jquery.min.js";
 import "assets/js/libs/jquery.als-1.7.min.js";
@@ -18,19 +19,13 @@ import CardContent from '@material-ui/core/CardContent';
 import newsUpdate from "../../services/NewsUpdate";
 
 import {
-  cardTitle,
-  cardLink,
-  cardSubtitle,
   card
 } from "assets/jss/material-kit-react.js";
 
-import basicsStyle from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+import basicsStyle from "./styles";
 
 const styles = {
   ...basicsStyle,
-  cardTitle,
-  cardLink,
-  cardSubtitle,
   card
 };
 
@@ -70,11 +65,18 @@ export default function NewsAndUpdatesPage() {
   return (
     <div className={`${classes.sections} news-updates-page-container`}>
       <div className={`${classes.container}`}>
-        <Grid container spacing={2} className="feasts-list">
-          <Typography variant="h5" className={classes.title}>
-            Updates
-          </Typography>
 
+      <GridContainer className={classes.sectionHeader}
+          direction="column"
+          justify="center"
+          alignItems="center">
+          <GridItem xs={12} sm={12} md={8}>
+            <h2> Latest Updates on Covid-19</h2>
+            <h4>Our Chapel brings you here the latest from the Catholic Church with respect to the current on-going Pandemic(Covid-19)</h4>
+          </GridItem>
+      </GridContainer>
+
+        <Grid container spacing={2} className="feasts-list">
           <Grid item xs={12} md={12}>
             {generalUpdates.map((obj, index) => {
               return (
@@ -109,17 +111,17 @@ export default function NewsAndUpdatesPage() {
               <div className="als-container"
                 ref={el => initializeNewsScroller(el)} >
                 <div className="als-viewport">
-                  <div className="als-wrapper">
+                  <List className="als-wrapper">
                     {archdiocesanNews.map((obj, index) => {
                       return (
-                        <div key={index} className="als-item title">
+                        <ListItem key={index} className="als-item title">
                           <a href={obj.link} target="_blank">
                             {obj.title}
                           </a>
-                        </div>
+                        </ListItem>
                       );
                     })}
-                  </div>
+                  </List>
                 </div>
               </div>
             }
@@ -133,17 +135,24 @@ export default function NewsAndUpdatesPage() {
               <div className="als-container"
                 ref={el => initializeNewsScroller(el)} >
                 <div className="als-viewport">
-                  <div className="als-wrapper">
+                  {/* <div className="als-wrapper"> */}
+                  <List className="als-wrapper">
                     {vaticanNews.map((obj, index) => {
                       return (
-                        <div key={index} className="als-item title">
+                        <ListItem key={index} className="als-item title">
                           <a href={obj.link} target="_blank">
                             {obj.title}
                           </a>
-                        </div>
+                        </ListItem>
+                        // <div key={index} className="als-item title">
+                        //   <a href={obj.link} target="_blank">
+                        //     {obj.title}
+                        //   </a>
+                        // </div>
                       );
                     })}
-                  </div>
+                  </List>
+                  {/* </div> */}
                 </div>
               </div>
             }

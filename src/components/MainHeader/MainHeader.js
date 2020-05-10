@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -11,12 +12,22 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import styles from "assets/jss/material-kit-react/components/headerStyle.js";
+// import styles from "assets/jss/material-kit-react/components/headerStyle.js";
+import basicsStyle,{ imageStyles} from './styles';
+import image from "assets/img/st-rita.gif";
 
-const useStyles = makeStyles(styles);
+const allStyles = {
+  ...basicsStyle,
+  ...imageStyles,
+  // ...typographyStyle
+};
+
+const useStyles = makeStyles(allStyles);
 
 export default function MainHeader(props) {
   const classes = useStyles();
@@ -53,6 +64,13 @@ export default function MainHeader(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
+
+  const history = useHistory();
+
+  function handleClick(type) {
+    history.push(type);
+  }
+
   const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
@@ -60,7 +78,17 @@ export default function MainHeader(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  const brandComponent = <List><ListItem>
+  <Button
+    justIcon
+    round
+     onClick={e => handleClick("/")}
+    color="rose"
+  >
+    <img src={image} className={classes.img}/>
+  </Button>
+</ListItem></List>
+  
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

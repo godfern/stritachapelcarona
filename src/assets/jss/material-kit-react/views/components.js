@@ -46,17 +46,7 @@ const componentsStyle = {
     height:"100%",
     width:"300%",
     animation:`$cloud_one 50s linear infinite`
-    // -webkit-animation:cloud_one 50s linear infinite;
-    // -moz-animation:cloud_one 50s linear infinite;
-    // -o-animation:cloud_one 50s linear infinite;
-    // -webkit-transform:translate3d(0,0,0);
-    // -moz-transform:translate3d(0,0,0);
-    // -o-transform:translate3d(0,0,0)
   },
-  // '@keyframes cloud_one': {
-  //   from: {left: "0"},
-  //   to: {left: "-200%"}
-  // },
 
   cloudsTwo: {
     backgroundImage: "url(" + cloudTwo + ")",
@@ -66,17 +56,8 @@ const componentsStyle = {
     height:"100%",
     width:"300%",
     animation:`$cloud_two 50s linear infinite`
-    // -webkit-animation:cloud_one 50s linear infinite;
-    // -moz-animation:cloud_one 50s linear infinite;
-    // -o-animation:cloud_one 50s linear infinite;
-    // -webkit-transform:translate3d(0,0,0);
-    // -moz-transform:translate3d(0,0,0);
-    // -o-transform:translate3d(0,0,0)
   },
-  // '@keyframes cloud_two': {
-  //   from: {left: "0"},
-  //   to: {left: "-200%"}
-  // },
+  
   cloudsThree: {
     backgroundImage: "url(" + cloudThree + ")",
     position:"absolute",
@@ -85,46 +66,7 @@ const componentsStyle = {
     height:"100%",
     width:"300%",
     animation:`$cloud_three 50s linear infinite`
-    // -moz-animation:cloud_one 50s linear infinite;
-    // -o-animation:cloud_one 50s linear infinite;
-    // -webkit-transform:translate3d(0,0,0);
-    // -moz-transform:translate3d(0,0,0);
-    // -o-transform:translate3d(0,0,0)
-  },
-  // '@keyframes cloud_three': {
-  //   from: {left: "0"},
-  //   to: {left: "-200%"}
-  // },
-  
-  // .clouds_two {
-  //   background:url("../images/cloud_two.png");
-  //   position:absolute;
-  //   left:0;
-  //   top:0;
-  //   height:100%;
-  //   width:300%;
-  //   -webkit-animation:cloud_two 75s linear infinite;
-  //   -moz-animation:cloud_two 75s linear infinite;
-  //   -o-animation:cloud_two 75s linear infinite;
-  //   -webkit-transform:translate3d(0,0,0);
-  //   -moz-transform:translate3d(0,0,0);
-  //   -o-transform:translate3d(0,0,0)
-  // }
-  
-  // .clouds_three {
-  //   background:url("../images/cloud_three.png");
-  //   position:absolute;
-  //   left:0;
-  //   top:0;
-  //   height:100%;
-  //   width:300%;
-  //   -webkit-animation:cloud_three 100s linear infinite;
-  //   -moz-animation:cloud_three 100s linear infinite;
-  //   -o-animation:cloud_three 100s linear infinite;
-  //   -webkit-transform:translate3d(0,0,0);
-  //   -moz-transform:translate3d(0,0,0);
-  //   -o-transform:translate3d(0,0,0)
-  // }
+  }
 };
 
 export default componentsStyle;
