@@ -9,8 +9,6 @@ import Card from "components/Card/Card.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import { timeConvert } from "./utils";
-import chapelInside from "assets/img/chapel_inside1.jpg";
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -71,7 +69,7 @@ function ChapelServicesGrid({ services }) {
                 <GridItem xs={12} sm={6}>{listItems}</GridItem>
                 <GridItem xs={12} sm={6}>
                     <Card className={`${classes.card} card-wrapper`}>
-                        <img className={classes.imgCard} src={chapelInside} />
+                        <img className={classes.imgCard} src="https://dl.dropboxusercontent.com/s/pe2uuawtmm00xnd/chapel_inside1.jpg?dl=0" />
                     </Card>
                 </GridItem>
             </Grid>

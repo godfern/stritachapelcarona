@@ -16,9 +16,9 @@ import Card from "components/Card/Card.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
-import stRitaCardImage from "assets/img/st-rita-card.jpg";
-import chapelCardImage from "assets/img/chapel.jpg";
-import covidCardImage from "assets/img/covid-19.png";
+// import stRitaCardImage from "assets/img/st-rita-card.jpg";
+// import chapelCardImage from "assets/img/chapel.jpg";
+// import covidCardImage from "assets/img/covid-19.png";
 
 
 import {
@@ -65,7 +65,7 @@ export default function HomePage() {
     <div className={classes.sections}>
       <div className={`${classes.container} tile-cards-container`}>
         <Card className={`${classes.card} card-wrapper`}>
-          <img className={classes.imgCard} src={stRitaCardImage} alt="Card-img" />
+          <img className={classes.imgCard} src={"https://dl.dropboxusercontent.com/s/g635zhfh0704058/st-rita-card.jpg?dl=0"} alt="Card-img" />
           <div className={classes.imgCardOverlay}>
             <h2>Novenas & Feast</h2>
             {/* <p>Find the latest of the Novenas & Feast details here</p> */}
@@ -73,7 +73,7 @@ export default function HomePage() {
           </div>
         </Card>
         <Card className={`${classes.card} card-wrapper`}>
-          <img className={classes.imgCard} src={chapelCardImage} alt="Card-img" />
+          <img className={classes.imgCard} src={"https://dl.dropboxusercontent.com/s/krewaiqadn6ts2b/chapel.jpg?dl=0"} alt="Card-img" />
           <div className={classes.imgCardOverlay}>
             <h2>Chapel Announcement</h2>
             {/* <p>Find the latest from the chapel</p> */}
@@ -82,7 +82,7 @@ export default function HomePage() {
         </Card>
 
         <Card className={`${classes.card} card-wrapper`}>
-          <img className={classes.imgCard} src={covidCardImage} alt="Card-img" />
+          <img className={classes.imgCard} src={"https://dl.dropboxusercontent.com/s/fl6o86q9q0xtdk7/covid-19.png?dl=0"} alt="Card-img" />
           <div className={classes.imgCardOverlay}>
             <h2>COVID-19 Updates</h2>
             {/* <p>Find the latest news and updates from Vatican and Archdiocesan</p> */}

@@ -12,11 +12,7 @@ import BannerMainContent from "components/BannerMainContent/BannerMainContent.js
 
 // sections for this page
 import HeaderLinks from "components/MainHeader/MainHeaderLinks.js";
-
-import image from "assets/img/st-rita.jpeg";
-
 import basicsStyle, { imageStyles } from './styles';
-
 
 const allStyles = {
   ...basicsStyle,
@@ -58,7 +54,7 @@ class Layout extends Component {
               justify="center">
               <GridItem xs={12} sm={2}>
                   <img
-                    src={image}
+                    src={"https://dl.dropboxusercontent.com/s/gkt4zxmet2r0yfs/st-rita-banner.jpeg?dl=0"}
                     alt="..."
                     className={
                       classes.imgFluid +
