@@ -59,7 +59,7 @@ const basicsStyle = {
         left:"10px",
         fontWeight: "500",
         fontSize: "18px",
-        color: "##228ae6"
+        color: "#228ae6"
     }
 };
 

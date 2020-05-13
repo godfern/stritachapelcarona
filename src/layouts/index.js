@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { withStyles } from "@material-ui/core/styles";
@@ -28,7 +28,7 @@ class Layout extends Component {
   }
 
   render() {
-    const {classes} = this.props;
+    const { classes } = this.props;
     return (
       <React.Fragment>
         <Header
@@ -52,24 +52,24 @@ class Layout extends Component {
             <GridContainer direction="column"
               alignItems="center"
               justify="center">
-              <GridItem xs={12} sm={2}>
-                  <img
-                    src={"https://dl.dropboxusercontent.com/s/gkt4zxmet2r0yfs/st-rita-banner.jpeg?dl=0"}
-                    alt="..."
-                    className={
-                      classes.imgFluid +
-                      " " +
-                      classes.imgCard
-                    }
-                  />
+              <GridItem xs={12} sm={6} className={classes.textCenter}>
+                <h3  className={classes.chapelTitles}>St. Rita's Chapel</h3>
               </GridItem>
               <GridItem xs={12} sm={6} className={classes.textCenter}>
-                <h3>St. Rita's Chapel</h3>
-              </GridItem>
-              <GridItem xs={12} sm={6} className={classes.textCenter}>
-                <h4>
+                <h4 className={classes.chapelTitles}>
                   Carona, Aldona, Goa.
                   </h4>
+              </GridItem>
+              <GridItem xs={10} sm={10} md={3}>
+                <img
+                  src={"https://dl.dropboxusercontent.com/s/gkt4zxmet2r0yfs/st-rita-banner.jpeg?dl=0"}
+                  alt="..."
+                  className={
+                    classes.imgFluid +
+                    " " +
+                    classes.imgCard
+                  }
+                />
               </GridItem>
             </GridContainer>
           </div>

@@ -67,6 +67,10 @@ const basicsStyle = {
         height: "100%",
         width: "300%",
         animation: `$cloud_three 50s linear infinite`
+    },
+    chapelTitles: {
+        margin: "2px 0",
+        lineheight: "1em"
     }
 };
 

@@ -29,9 +29,7 @@ export default function AnnouncementsList({subTitle, announcements}) {
     <React.Fragment>
       {announcements &&
         <React.Fragment>
-          <Typography variant="h6" className={`${classes.title} sub-title`}>
-            {subTitle}
-          </Typography>
+          <h4 className="sub-title">{subTitle}</h4>
           <List key={classes.list} className={classes.list}>
             {announcements.map((announcement, index) => {
               return (
@@ -40,8 +38,8 @@ export default function AnnouncementsList({subTitle, announcements}) {
                     <ListItemText className="announcement-wrapper">
                       {announcement instanceof Object > 0 ?
                         <React.Fragment>
-                          <div className="title">{announcement.title}</div>
-                          <div>{Moment(announcement.date).format('M MMM YYYY')}</div>
+                          <h4>{announcement.title}</h4>
+                          <div>{announcement.date && Moment(announcement.date).format('M MMM YYYY')}</div>
                         </React.Fragment>
                       :
                         <div className="title">{announcement}</div>
