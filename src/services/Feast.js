@@ -1,6 +1,6 @@
 import { fetchJSON } from "../helpers/api";
 
-const FEAST_API_URL = "http://demo7623541.mockable.io/api/feasts";
+const FEAST_API_URL = "https://demo7623541.mockable.io/api/feasts";
 
 class Feast {
   async list() {

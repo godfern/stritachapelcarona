@@ -1,6 +1,6 @@
 import { fetchJSON } from "../helpers/api";
 
-const NEWS_UPDATE_API_URL = "http://demo7623541.mockable.io/api/news_and_updates";
+const NEWS_UPDATE_API_URL = "https://demo7623541.mockable.io/api/news_and_updates";
 
 class NewsUpdate {
   async get() {
