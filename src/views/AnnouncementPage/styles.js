@@ -26,6 +26,9 @@ const basicsStyle = {
   },
   sectionHeader: {
       textAlign: "center"
+  },
+  subTitle: {
+    fontWeight: "bold"
   }
 };
 
