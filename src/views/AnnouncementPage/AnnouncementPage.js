@@ -36,6 +36,14 @@ export default function AnnouncementPage() {
     fetchAnnouncements();
   }, []);
 
+  let chapelAnnouncements = Object.keys(announcement_json).length && announcement_json["our_chapel"] || [];
+  let chapelWeeklyAnnouncements =  Object.keys(announcement_json).length && announcement_json["our_chapel"]["weekly_announcements"] || [];
+  let villageAnnouncements = Object.keys(announcement_json).length && announcement_json["our_chapel"]["village_announcements"] || [];
+  let otherAnnouncements = Object.keys(announcement_json).length && announcement_json["our_chapel"]["other_announcements"] || [];
+  let churchOtherAnnouncements = Object.keys(announcement_json).length && announcement_json["our_church"]["other_announcements"] || [];
+  let churchWeeklyAnnouncements =  Object.keys(announcement_json).length && announcement_json["our_church"]["weekly_announcements"] || [];
+  let churchWeeklyMasses =  Object.keys(announcement_json).length && announcement_json["our_church"]["weekly_masses"] || [];
+
   return (
 
     <div className={`${classes.sections} announcement-page-container`}>
@@ -46,21 +54,31 @@ export default function AnnouncementPage() {
           alignItems="center">
           <GridItem xs={12} sm={12} md={8}>
             <h2>Weekly announcements from the Chapel and Church </h2>
-            <h4>Our Chapel brings you here weekly announcements</h4>
+            <h3>Our Chapel brings you here weekly announcements</h3>
           </GridItem>
       </GridContainer>
 
         <Grid container spacing={2} className="announcement-list">
           <Grid item xs={12} md={8}>
-            {announcement_json["our_chapel"] &&
+            {chapelAnnouncements.length > 0 &&
               <>
-                <h5 className="main-title">Chapel Announcements</h5>
-                <AnnouncementsList subTitle="Weekly Announcements"
-                  announcements={ announcement_json["our_chapel"]["weekly_announcements"] } />
-                <AnnouncementsList subTitle="Village Announcements"
-                  announcements={ announcement_json["our_chapel"]["village_announcements"] } />
-                <AnnouncementsList subTitle="Other Announcements"
-                  announcements={ announcement_json["our_chapel"]["other_announcements"] } />
+                <h4 className="main-title">Chapel Announcements</h4>
+                {
+                chapelWeeklyAnnouncements.length > 0 &&
+                  <AnnouncementsList subTitle="Weekly Announcements"
+                  announcements={ chapelWeeklyAnnouncements } />
+                }
+                
+                {
+                villageAnnouncements.length > 0 && 
+                  <AnnouncementsList subTitle="Village Announcements"
+                  announcements={villageAnnouncements } />
+                }
+                {
+                  otherAnnouncements.length > 0 && 
+                  <AnnouncementsList subTitle="Other Announcements"
+                  announcements={ otherAnnouncements} />
+                }
               </>
             }
           </Grid>
@@ -68,13 +86,21 @@ export default function AnnouncementPage() {
           <Grid item xs={12} md={8}>
             {announcement_json["our_church"] &&
               <>
-                <h5 className="main-title">Church Announcements</h5>
-                <AnnouncementsList subTitle="Weekly Announcements"
-                  announcements={ announcement_json["our_church"]["weekly_announcements"] } />
-                <AnnouncementsList subTitle="Mass For The Dead"
-                  announcements={ announcement_json["our_church"]["mass_for_the_dead"] } />
-                <AnnouncementsList subTitle="Other Announcements"
-                  announcements={ announcement_json["our_church"]["other_announcements"] } />
+                <h4 className="main-title">Church Announcements</h4>
+                {churchWeeklyAnnouncements.length > 0 &&
+                  <AnnouncementsList subTitle="Weekly Announcements"
+                  announcements={churchWeeklyAnnouncements} />
+                }
+                {
+                  churchWeeklyMasses.length > 0 &&
+                  <AnnouncementsList subTitle="Weekly Masses"
+                  announcements={ churchWeeklyMasses } />
+                }
+                  {
+                    churchOtherAnnouncements.length > 0 && 
+                    <AnnouncementsList subTitle="Other Announcements"
+                  announcements={ churchOtherAnnouncements } />
+                  }
               </>
             }
           </Grid>

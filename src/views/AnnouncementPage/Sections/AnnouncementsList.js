@@ -14,7 +14,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 
-import basicsStyle from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+import basicsStyle from "../styles";
 
 const styles = {
   ...basicsStyle
@@ -29,7 +29,7 @@ export default function AnnouncementsList({subTitle, announcements}) {
     <React.Fragment>
       {announcements &&
         <React.Fragment>
-          <h4 className="sub-title">{subTitle}</h4>
+          <h4 className={classes.subTitle}>{subTitle}</h4>
           <List key={classes.list} className={classes.list}>
             {announcements.map((announcement, index) => {
               return (
@@ -39,7 +39,7 @@ export default function AnnouncementsList({subTitle, announcements}) {
                       {announcement instanceof Object > 0 ?
                         <React.Fragment>
                           <h4>{announcement.title}</h4>
-                          <div>{announcement.date && Moment(announcement.date).format('M MMM YYYY')}</div>
+                          <div>{announcement.date && Moment(announcement.date).format('D MMM YYYY')}</div>
                         </React.Fragment>
                       :
                         <div className="title">{announcement}</div>
