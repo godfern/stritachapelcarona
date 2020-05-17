@@ -5,10 +5,9 @@ import { Link as RouterLink } from 'react-router-dom';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Chip from '@material-ui/core/Chip';
-import Typography from "@material-ui/core/Typography";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 
 // @material-ui/icons
 
@@ -56,11 +55,18 @@ export default function AnnouncementPage() {
           <GridItem xs={12} sm={12} md={8}>
             <h2>Weekly announcements from the Chapel and Church </h2>
             <h3>Our Chapel brings you here weekly announcements</h3>
-            <Chip color="secondary" label="Please note Masses are held without the congregation"/>
           </GridItem>
       </GridContainer>
 
         <Grid container spacing={2} className="announcement-list">
+        <SnackbarContent
+          message={
+            <span>
+              Please note Masses are held without the congregation
+            </span>
+          }
+          color="danger"
+        />
           <Grid item xs={12} md={8}>
             {chapelAnnouncements.length > 0 &&
               <>
