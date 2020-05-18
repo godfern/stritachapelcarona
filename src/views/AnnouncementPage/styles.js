@@ -29,6 +29,17 @@ const basicsStyle = {
   },
   subTitle: {
     fontWeight: "bold"
+  },
+  massTitle: {
+    width: "80%"
+  },
+  massTime: {
+    width: "20%",
+    fontSize: "1.125rem",
+    lineHeight: "1.5em",
+    marginTop: "10px",
+    marginBottom: "10px",
+    textAlign: "right"
   }
 };
 

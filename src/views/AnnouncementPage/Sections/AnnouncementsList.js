@@ -38,8 +38,8 @@ export default function AnnouncementsList({subTitle, announcements}) {
                     <ListItemText className="announcement-wrapper">
                       {announcement instanceof Object > 0 ?
                         <React.Fragment>
-                          <h4>{announcement.title}</h4>
-                          <div>{announcement.date && Moment(announcement.date).format('D MMM YYYY')}</div>
+                          <h4 className={classes.massTitle}>{announcement.title}</h4>
+                          <div className={classes.massTime}>{announcement.date && Moment(announcement.date).format('D MMM YYYY')}</div>
                         </React.Fragment>
                       :
                         <div className="title">{announcement}</div>
