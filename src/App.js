@@ -13,6 +13,7 @@ import ComingSoonPage from "./views/ComingSoonPage/ComingSoonPage";
 import NovenaPage from "./views/NovenaPage/NovenaPage";
 import AnnouncementPage from "./views/AnnouncementPage/AnnouncementPage";
 import NewsAndUpdatesPage from "./views/NewsAndUpdatesPage/NewsAndUpdatesPage";
+import OurChapelPage from "./views/OurChapelPage/OurChapelPage";
 
 // import { configure } from "./helpers/mock-api";
 // Mocking all the APIs over here
@@ -40,6 +41,7 @@ class App extends Component{
           <RouteWithLayout layout={Layout} path="/announcements" component={AnnouncementPage} />
           <RouteWithLayout layout={Layout} path="/updates" component={NewsAndUpdatesPage} />
           <RouteWithLayout layout={Layout} path="/coming-soon-page" component={ComingSoonPage}/>
+          <RouteWithLayout layout={Layout} path="/our-chapel" component={OurChapelPage}/>
           <RouteWithLayout layout={Layout} path="/" component={HomePage}/>
         </Switch>
       </Router>

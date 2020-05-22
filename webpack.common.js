@@ -60,6 +60,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-      historyApiFallback: true
+      historyApiFallback: true,
+      headers: {
+        'X-Frame-Options': 'sameorigin'
+      }
     }
 };

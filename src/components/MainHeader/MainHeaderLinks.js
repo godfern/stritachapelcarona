@@ -39,7 +39,7 @@ export default function MainHeaderLinks(props) {
       </Button>
       <Button
         className={classes.navLink}
-        onClick={e => handleClick("/coming-soon-page")}
+        onClick={e => handleClick("/our-chapel")}
         color="transparent"
       >
         Our Chapel
